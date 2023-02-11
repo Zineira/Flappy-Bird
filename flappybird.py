@@ -1,9 +1,9 @@
 import pygame
-import Passaroco
+from bird import Bird
 
 pygame.init()
 
-passaro = Passaroco.Bird(200, 300, "paxaro.png")
+passaro = Bird(200, 300, "paxaro.png")
 
 screen_height = 1000
 screen_width = 1000
