@@ -2,7 +2,7 @@ import pygame
 
 
 class Menu:
-    def __init__(self, screen):
+    def __init__(self, screen, test3):
         self.screen = screen
         self.screen_rect = screen.get_rect()
 
