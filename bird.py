@@ -6,7 +6,7 @@ class Bird:
         self.x = x
         self.y = y
         self.salto = -10
-        self.g = 0.98
+        self.g = 1
         try:
             self.image = pygame.image.load(image)
         except Exception as e:
