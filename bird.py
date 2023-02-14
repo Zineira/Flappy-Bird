@@ -14,6 +14,7 @@ class Bird:
         self.image = pygame.transform.scale(self.image, (60, 50))
 
     def update(self, dt):
+        print(dt)
         keys = pygame.key.get_pressed()
         if keys[pygame.K_SPACE]:
             self.jump()
@@ -21,9 +22,8 @@ class Bird:
         self.salto += self.g * dt
         if self.y >= 650:
             self.salto = 0
-
-        print("O salto = ", self.salto)
-        print("y = ", self.y)
+        if self.y <= 0:
+            self.y = 0
 
     def jump(self):
         self.salto = -10
