@@ -1,11 +1,13 @@
 import pygame
+import random
 
 
 class Canudos:
     def __init__(self, x, height, image_top, image_bottom):
         self.x = x
+        self.y = random.randint(-430, -130)
         self.height = height
-        self.gap = 50
+        self.gap = 100
         try:
             self.image_top = pygame.image.load(image_top)
             self.image_bottom = pygame.image.load(image_bottom)
@@ -19,6 +21,7 @@ class Canudos:
         self.x -= 5
 
     def draw(self, screen):
-        screen.blit(self.image_top, (int(self.x), -30))
+        print(self.y)
+        screen.blit(self.image_top, (int(self.x), self.y))
         screen.blit(self.image_bottom,
-                    (int(self.x), int(self.height+self.gap)))
+                    (int(self.x), int(self.y+self.height+self.gap)))

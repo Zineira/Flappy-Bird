@@ -14,7 +14,6 @@ class Bird:
         self.image = pygame.transform.scale(self.image, (60, 50))
 
     def update(self, dt):
-        print(dt)
         keys = pygame.key.get_pressed()
         if keys[pygame.K_SPACE]:
             self.jump()

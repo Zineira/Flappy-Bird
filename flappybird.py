@@ -10,9 +10,9 @@ clock = pygame.time.Clock()
 
 passaro = bird.Bird(200, 300, "paxaro.png")
 cano = canudos.Canudos(1150, 550, "cano1.png", "cano2.png")
-
+newcano = canudos.Canudos(1750, 550, "cano1.png", "cano2.png")
 screen_height = 760
-screen_width = 1000
+screen_width = 760
 
 screen = pygame.display.set_mode((screen_width, screen_height))
 background_imagem = pygame.image.load("background.png")
@@ -51,8 +51,14 @@ while running:
         # Update game logic and display here
         background_imagem = pygame.image.load("background.png")
         screen.blit(background_imagem, (0, 0))
+        if (newcano.x < -80):
+            newcano = canudos.Canudos(1150, 550, "cano1.png", "cano2.png")
+        elif (cano.x < -80):
+            cano = canudos.Canudos(1150, 550, "cano1.png", "cano2.png")
         cano.update()
         cano.draw(screen)
+        newcano.update()
+        newcano.draw(screen)
         passaro.update(0.80)
         passaro.draw(screen)
 
