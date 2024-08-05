@@ -1,0 +1,14 @@
+SCREEN_WIDTH = 550
+SCREEN_HEIGHT = 700
+
+#Game mechanics
+FPS = 60
+GRAVITY = 0.50
+BACKGROUND_SPEED = 1.5
+
+#Bird mechanics
+STRENGTH_FLAP = -10
+
+#Pipe mechanics
+PIPES_GAP = 175
+PIPE_SPEED = 5
